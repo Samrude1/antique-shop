@@ -6,6 +6,9 @@ export default function HomeScreen() {
     <>
       <div className="content">
         <div className="box">
+          <h1 className="mt-3">Featured products</h1>
+        </div>
+        <div className="box">
           <p className="mt-3">
             ~ All Antiques, Art, and Collectibles are in good condition and sold
             as is. ~
