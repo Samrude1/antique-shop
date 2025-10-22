@@ -3,7 +3,26 @@
 // {object} each product is an object in the [array]
 // images come from the frontend > public folder
 
+// http://localhost:8000/api/seed
+// go to this location and it will load data into the database
+
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "Gabe",
+      email: "gabudemy@gmail.com",
+      password: bcrypt.hashSync("Gabe1234"),
+      isAdmin: true,
+    },
+    {
+      name: "Jack",
+      email: "jack@email.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       name: "Asian Snuff Bottle",
@@ -11,7 +30,7 @@ const data = {
       category: "Asian",
       image: "/images/1a.jpg",
       price: 50,
-      countInStock: 1,
+      countInStock: 10,
       from: "China",
       finish: "Bone & Metal",
       rating: 5,
@@ -25,7 +44,7 @@ const data = {
       category: "Religious",
       image: "/images/2a.jpg",
       price: 50,
-      countInStock: 1,
+      countInStock: 5,
       from: "Italy",
       finish: "Wood and Gold Leaf",
       rating: 5,
@@ -38,7 +57,7 @@ const data = {
       category: "Asian",
       image: "/images/3a.jpg",
       price: 50,
-      countInStock: 1,
+      countInStock: 0,
       from: "China",
       finish: "Wood",
       rating: 5,
@@ -51,7 +70,7 @@ const data = {
       category: "Wood",
       image: "/images/4a.jpg",
       price: 500,
-      countInStock: 1,
+      countInStock: 10,
       from: "America",
       finish: "Wood",
       rating: 5,
@@ -65,7 +84,7 @@ const data = {
       category: "Asian",
       image: "/images/5a.jpg",
       price: 100,
-      countInStock: 1,
+      countInStock: 0,
       from: "China",
       finish: "Jade",
       rating: 5,
@@ -91,7 +110,7 @@ const data = {
       category: "Metal",
       image: "/images/7a.jpg",
       price: 25,
-      countInStock: 1,
+      countInStock: 14,
       from: "Japan",
       finish: "Gold",
       rating: 5,
@@ -118,7 +137,7 @@ const data = {
       category: "Asian",
       image: "/images/9a.jpg",
       price: 125,
-      countInStock: 1,
+      countInStock: 11,
       from: "China",
       finish: "Stone",
       rating: 5,
